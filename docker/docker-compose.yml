@@ -1,0 +1,15 @@
+version: "2.4"
+
+services:
+  multi_agent_env:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    user: root
+    volumes:
+      - /PATH_TO_VDMA_REPO:/home/project_ws/VDMA
+      - /PATH_TO_EGOSCHEMA_DATA_IMAGES:/home/project_ws/images
+    env_file:
+      - .env
+    working_dir: /home/project_ws/VDMA
