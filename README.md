@@ -84,7 +84,7 @@ If you find this code useful, please consider citing our paper.
   author={Noriyuki Kugo and Tatsuya Ishibashi and Kosuke Ono and Yuji Sato},
   journal={ArXiv},
   year={2024},
-  volume={abs/TBA},
+  volume={abs/2407.03610},
   url={https://github.com/PanasonicConnect/VDMA}
 }
 ```
