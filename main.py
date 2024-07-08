@@ -11,12 +11,12 @@ from stage1 import execute_stage1
 from stage2 import execute_stage2
 
 
-# 0から10秒の間でランダムにスリープ
+# Sleep for a random duration between 0 and 10 seconds
 sleep_time = random.uniform(0, 10)
 time.sleep(sleep_time)
 
 
-QUESTION_FILE_PATH = "subset_anno.json" # 質問文が書かれたファイルのパスを指定してください
+QUESTION_FILE_PATH = "subset_anno.json" # Set the file path containing the question
 
 azure_openai_endpoint   = os.getenv("AZURE_OPENAI_ENDPOINT")
 azure_openai_api_key    = os.getenv("AZURE_OPENAI_API_KEY")
@@ -55,7 +55,7 @@ while True:
     try:
         video_id, json_data = select_data_and_mark_as_processing(QUESTION_FILE_PATH)
 
-        if video_id is None: # 全てのデータが処理済み
+        if video_id is None: # All data has been processed
             break
 
         # Set environment variables
