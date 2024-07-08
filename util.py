@@ -278,9 +278,7 @@ def create_stage2_organizer_prompt(question_data:dict, shuffle_questions=False):
         "You should respect the opinions of other experts. Also, include the opinions of other experts in your explanation.\n\n"
 
         # "Exclude options that contain unnecessary embellishments, such as subjective adverbs or clauses that cannot be objectively determined, and consider only the remaining options.\n"
-        # NOTE: subsetの一部のデータで精度向上確認済み（164 / 212）
         # "Place importance on clear and concise expression, and avoid choosing options that include unnecessary embellishments\n"
-        # NOTE: 現在推論中
         # "Avoid choosing options that include adverbs and other unnecessary embellishments (especially those indicating properties or states), and place importance on comprehensive and accurate descriptions of objects and actions in clear sentences.\n\n"
         "Avoid choosing options that include adverbs and other unnecessary embellishments, especially those indicating properties or states\n"
         "Place importance on comprehensive and accurate descriptions of objects and actions in sentences.\n\n"
@@ -331,7 +329,6 @@ def extract_expert_info_json(data):
             json_extract = json.loads(json_data)
             for key, value in json_extract.items():
                 if "ExpertName" in key and "Prompt" not in key:
-                    # 数字を抽出して対応するPromptキーを作成
                     number = re.findall(r'\d+', key)[0]
                     expert_key = f"ExpertName{number}"
                     prompt_key = f"ExpertName{number}Prompt"
