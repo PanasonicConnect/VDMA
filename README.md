@@ -1,8 +1,7 @@
 # VDMA : Video Question Answering with Dynamically Generated Multi-Agents
 ![overall_architecture](docs/overall_architecture.png)
 
-This is official implementation for paper: VDMA: Video Question Answering with Dynamically Generated Multi-Agents
-
+This is official implementation for paper: [VDMA: Video Question Answering with Dynamically Generated Multi-Agents](https://arxiv.org/abs/2407.03610)
 
 ## 🚩 Preparation
 
